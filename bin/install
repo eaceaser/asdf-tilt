@@ -43,4 +43,4 @@ get_download_url() {
   echo "https://github.com/windmilleng/tilt/releases/download/v${version}/tilt.${version}.${platform}.x86_64.tar.gz"
 }
 
-install_skaffold $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
+install_tilt $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
