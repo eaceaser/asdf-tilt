@@ -1,6 +1,6 @@
 image: quay.io/librelabs/ci:dind17
 
-adfs plugin-test:
+tilt-plugin-test:
   stage: test
   before_script:
     - git clone https://github.com/asdf-vm/asdf.git
