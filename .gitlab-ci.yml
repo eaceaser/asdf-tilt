@@ -7,7 +7,7 @@ tilt-plugin-test:
     - git clone https://github.com/asdf-vm/asdf.git
     - . asdf/asdf.sh
   script:
-    - asdf plugin-add tilt ./
+    - asdf plugin-add tilt https://gitlab.com/wt0f/asdf-tilt.git
     - asdf list-all tilt
     - asdf=$(which asdf)
-    - bash -x $asdf plugin test tilt ./ 'tilt version' || exit 1
+    - bash -x $asdf plugin test tilt https://gitlab.com/wt0f/asdf-tilt.git 'tilt version' || exit 1
