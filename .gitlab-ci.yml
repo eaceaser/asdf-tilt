@@ -9,4 +9,4 @@ tilt-plugin-test:
   script:
     - asdf plugin-add tilt ./
     - asdf list-all tilt
-    - asdf plugin-test tilt ./ 'tilt help' || exit 1
+    - asdf plugin-test tilt ./ 'tilt version' || exit 1
