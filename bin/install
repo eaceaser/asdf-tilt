@@ -19,8 +19,11 @@ install_tilt() {
 
   local bin_path="${bin_install_path}/tilt"
   echo "Downloading tilt from ${download_url}"
-  curl -sSL "$download_url" -o "$bin_path"
-  chmod +x $bin_path
+  curl -sSL "$download_url" -o "${install_path}/tilt.tar.gz"
+  tar xzf -C "${install_path}" "${install_path}/tilt.tar.gz"
+  mkdir "${bin_install_path}" && mv "${install_path}/tilt" "${bin_path}"
+  chmod +x "$bin_path"
+  rm "${install_path}/tilt.tar.gz"
 }
 
 get_arch() {
