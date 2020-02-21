@@ -10,4 +10,4 @@ tilt-plugin-test:
     - asdf plugin-add tilt ./
     - asdf list-all tilt
     - asdf=$(which asdf)
-    - bash -x $asdf plugin-test tilt ./ 'tilt version' || exit 1
+    - bash -x $asdf plugin test tilt ./ 'tilt version' || exit 1
