@@ -3,7 +3,7 @@
 ![Build Status](https://gitlab.com/wt0f/asdf-tilt/badges/master/pipeline.svg)
 
 This is the plugin repo for [asdf-vm/asdf](https://github.com/asdf-vm/asdf.git)
-to manage [windmilleng/tilt](https://github.com/windmilleng/tilt.git).
+to manage [tilt-dev/tilt](https://github.com/tilt-dev/tilt.git).
 
 ## Install
 
