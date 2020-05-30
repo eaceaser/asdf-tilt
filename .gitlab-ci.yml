@@ -10,4 +10,4 @@ tilt-plugin-test:
     - asdf plugin-add tilt $CI_REPOSITORY_URL
     - asdf plugin update tilt $CI_COMMIT_REF_NAME
     - asdf list-all tilt
-    - asdf plugin test tilt $CI_REPOSITORY_URL 'tilt version' || exit 1
+    - asdf plugin test tilt $CI_REPOSITORY_URL --asdf-plugin-gitref $CI_COMMIT_REF_NAME 'tilt version' || exit 1
