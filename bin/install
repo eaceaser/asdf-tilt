@@ -43,7 +43,7 @@ get_arch() {
 get_download_url() {
   local version="$1"
   local platform="$(get_arch)"
-  echo "https://github.com/windmilleng/tilt/releases/download/v${version}/tilt.${version}.${platform}.x86_64.tar.gz"
+  echo "https://github.com/tilt-dev/tilt/releases/download/v${version}/tilt.${version}.${platform}.x86_64.tar.gz"
 }
 
 install_tilt $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
