@@ -15,7 +15,7 @@ jobs:
     - name: checkout asdf
       uses: actions/checkout@v2
       with:
-        repository: https://github.com/asdf-vm/asdf.git
+        repository: asdf-vm/asdf
         path: asdf
     - name: test plugin
       run: |
