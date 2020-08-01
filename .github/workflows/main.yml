@@ -3,25 +3,23 @@ name: CI
 on:
   push:
     branches:
-    - master
+      - master
   pull_request:
     branches:
-    - master
+      - master
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout asdf
-      uses: actions/checkout@v2
-      with:
-        repository: asdf-vm/asdf
-        path: asdf
-    - name: test plugin
-      run: |
-        CLONE_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git"
-        . asdf/asdf.sh
-        asdf plugin-add tilt ${CLONE_URL}
-        asdf plugin update tilt ${GITHUB_REF}
-        asdf list-all tilt
-        asdf plugin test tilt ${CLONE_URL} --asdf-plugin-gitref ${GITHUB_REF} 'tilt version'
+      - name: checkout asdf
+        uses: actions/checkout@v2
+        with:
+          repository: asdf-vm/asdf
+          path: asdf
+      - name: test plugin
+        uses: asdf-vm/actions/plugin-test@v1
+        with:
+          command: tilt version
+        env:
+          OAUTH_TOKEN: ${{ github.token }}
